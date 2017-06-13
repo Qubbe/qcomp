@@ -104,17 +104,17 @@ Structure of a component file as of version 1.5.10
 
 Global Helper Functions /Classes
 
-Function ImportComponents(path<String / Array>) -> Loads external component files.
+Function ### ImportComponents(path<String / Array>) -> Loads external component files.
 eg. ImportComponents([
 	'comp1.comp',
 	'comp2.comp'
 ])
 
-Class QComponent(id<componenet id / component object>, options <options object>) => Initializes a new component object
+Class ### QComponent(id<componenet id / component object>, options <options object>) => Initializes a new component object
 eg. var item = new QComponent('my-item', {title:"My Item"});
 QComponent.view => A Reference to the view of the component
 QComponent.controller => A reference to the script of the component
-
+```html
 <component name='my-item'>
 	<div>{title}</div>
 	<script>
@@ -128,9 +128,9 @@ QComponent.controller => A reference to the script of the component
 		}
 	</script>
 </component>
+```
 
-
-Passing properties to Components:
+## Passing properties to Components:
 
 Properties are passed via the qcomp tags attribute strings. 
 They can be used in the handlebars and they populate _options object in the controller.
