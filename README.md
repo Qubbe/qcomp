@@ -10,7 +10,7 @@ Requirements: qcomps.js, JQuery 1.8+
 
 
 
-Useage:
+Usage:
 	
 <html>
 <head>
