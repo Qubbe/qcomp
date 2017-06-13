@@ -9,9 +9,8 @@ Why? Easy to start and setup on any environment. Created to get around having to
 Requirements: qcomps.js, JQuery 1.8+
 
 
-
 Usage:
-	
+```html	
 <html>
 <head>
 	<title></title>
@@ -22,9 +21,11 @@ Usage:
 <qcomp property='value'>my-component</qcomp>
 </body>
 </html>
+```
 
 
 Structure of a component file as of version 1.5.10
+```
 <global>
 	/*
 		Global scripts accessible by other components can set here <optional>
@@ -99,7 +100,7 @@ Structure of a component file as of version 1.5.10
 	</script>
 	
 </component>
-
+```
 
 Global Helper Functions /Classes
 
