@@ -25,7 +25,7 @@ Usage:
 
 
 Structure of a component file as of version 1.5.10
-```
+```html
 <global>
 	/*
 		Global scripts accessible by other components can set here <optional>
