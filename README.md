@@ -1,6 +1,5 @@
-# qcomp
-Quick Components
-	Written By: Quincey James (qubbe@qubbe.net)
+# Quick Components
+	
 
 What is it: Component based web development. Build website by creating reusable dynamic components.
 
