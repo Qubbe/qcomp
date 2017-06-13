@@ -104,13 +104,13 @@ Structure of a component file as of version 1.5.10
 
 Global Helper Functions /Classes
 
-Function ### ImportComponents(path<String / Array>) -> Loads external component files.
+Function ImportComponents(path<String / Array>) -> Loads external component files.
 eg. ImportComponents([
 	'comp1.comp',
 	'comp2.comp'
 ])
 
-Class ### QComponent(id<componenet id / component object>, options <options object>) => Initializes a new component object
+Class QComponent(id<componenet id / component object>, options <options object>) => Initializes a new component object
 eg. var item = new QComponent('my-item', {title:"My Item"});
 QComponent.view => A Reference to the view of the component
 QComponent.controller => A reference to the script of the component
