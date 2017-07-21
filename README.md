@@ -8,7 +8,7 @@ Why? Easy to start and setup on any environment. Created to get around having to
 Requirements: qcomps.js, JQuery 1.8+
 
 
-Usage:
+## Usage:
 ```html	
 <html>
 <head>
@@ -23,7 +23,7 @@ Usage:
 ```
 
 
-Structure of a component file as of version 1.5.10
+### Structure of a component file as of version 1.5.10
 ```html
 <global>
 	/*
@@ -101,7 +101,7 @@ Structure of a component file as of version 1.5.10
 </component>
 ```
 
-# Global Helper Functions /Classes
+## Global Helper Functions /Classes
 
 Function ImportComponents(path<String / Array>) -> Loads external component files.
 ```javascript
@@ -115,7 +115,13 @@ Class QComponent(id<componenet id / component object>, options <options object>)
 var item = new QComponent('my-item', {title:"My Item"});
 ```
 `QComponent.view` => A Reference to the view (jquery dom object) of the component
+```javascript
+$('body').append(item.view); //appends the components view to the body
+```
 `QComponent.controller` => A reference to the script of the component
+```javascript
+item.controller.myFunction(); //run myFunction which has been defined in the component script and exposed.
+```
 ```html
 <component name='my-item'>
 	<div>{title}</div>
@@ -215,7 +221,7 @@ There are a few special attributes that are handled differently:
 </html>
 ```
 
-# Nesting Components:
+## Nesting Components:
 	Nested components inherit the propeties(_options) from their parents unless overridden by their own. 
 	This does not include the special properties (id, class, style).
 
@@ -244,7 +250,7 @@ Output:
 </body>
 ```
 
-# Compiling components programmatically:
+## Compiling components programmatically:
 ```javascript
 var myComp = new QComponent('my-component', {title:"Hello World"});
 $('body').append(myComp.view);
