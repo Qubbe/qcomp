@@ -242,6 +242,6 @@ Output:
 ```
 
 #Compiling components programmatically:
-	`var myComp = new QComponent('my-component', {title:"Hello World"});`
-
-	`$('body').append(myComp.view);`
+```javascript
+	var myComp = new QComponent('my-component', {title:"Hello World"});
+	$('body').append(myComp.view);```
