@@ -114,8 +114,8 @@ Class QComponent(id<componenet id / component object>, options <options object>)
 ```javascript
 var item = new QComponent('my-item', {title:"My Item"});
 ```
-QComponent.view => A Reference to the view (jquery dom object) of the component
-QComponent.controller => A reference to the script of the component
+`QComponent.view` => A Reference to the view (jquery dom object) of the component
+`QComponent.controller` => A reference to the script of the component
 ```html
 <component name='my-item'>
 	<div>{title}</div>
