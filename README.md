@@ -135,26 +135,26 @@ Properties are passed via the qcomp tags attribute strings.
 They can be used in the handlebars and they populate _options object in the controller.
 
 There are a few special attributes that are handled differently:
-###	id -> is added to the components compiled root tag
-###	class -> adds the specififed classes to the compiled components root tag
-###	style -> adds specified styles to the compiled components root tag
+#####	id -> is added to the components compiled root tag
+#####	class -> adds the specififed classes to the compiled components root tag
+#####	style -> adds specified styles to the compiled components root tag
 
 #Attribute value casting:
-###	bool: forces a boolean value
+#####	bool: forces a boolean value
 		eg. <qcomp enabled:bool="true">my-component</qcomp>
 
-###	number: forces a number value
+#####	number: forces a number value
 		eg. <qcomp count:number='5'>my-component</qcomp>
 
 	string<default>: 
 
-###	json: creates an object from a json string  
+#####	json: creates an object from a json string  
 		eg. <qcomp props:json='{"item": "hello items", "item2": "hello item2" }'>my-component</qcomp>
 
-###	keyval: creates an object from key value pair (key:value;key:value)
+#####	keyval: creates an object from key value pair (key:value;key:value)
 		eg. <qcomp props:keyval="item:hello items;item2:hello item2">my-component</qcomp>
 
-###	attr: forces the attribute to be added to the compiled component root tag
+#####	attr: forces the attribute to be added to the compiled component root tag
 		eg. <qcomp name:attr='myComp1'>my-component</qcomp>
 
 Componenet File comps.comp:
