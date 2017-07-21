@@ -101,17 +101,20 @@ Structure of a component file as of version 1.5.10
 </component>
 ```
 
-Global Helper Functions /Classes
+# Global Helper Functions /Classes
 
 Function ImportComponents(path<String / Array>) -> Loads external component files.
-eg. ImportComponents([
+```javascript
+ImportComponents([
 	'comp1.comp',
 	'comp2.comp'
 ])
-
+```
 Class QComponent(id<componenet id / component object>, options <options object>) => Initializes a new component object
-eg. var item = new QComponent('my-item', {title:"My Item"});
-QComponent.view => A Reference to the view of the component
+```javascript
+var item = new QComponent('my-item', {title:"My Item"});
+```
+QComponent.view => A Reference to the view (jquery dom object) of the component
 QComponent.controller => A reference to the script of the component
 ```html
 <component name='my-item'>
@@ -146,7 +149,7 @@ There are a few special attributes that are handled differently:
 #####	number: forces a number value
 		eg. <qcomp count:number='5'>my-component</qcomp>
 
-#####	string<default>: 
+#####	string<default>: A string value this is default without a cast.
 
 #####	json: creates an object from a json string  
 		eg. <qcomp props:json='{"item": "hello items", "item2": "hello item2" }'>my-component</qcomp>
@@ -157,7 +160,7 @@ There are a few special attributes that are handled differently:
 #####	attr: forces the attribute to be added to the compiled component root tag
 		eg. <qcomp name:attr='myComp1'>my-component</qcomp>
 
-Componenet File comps.comp:
+###### Component File comps.comp:
 ```html
 <component name='my-component'>
 	<div class='my-component' style='color:#000'>
@@ -176,7 +179,7 @@ Componenet File comps.comp:
 	</script>
 </component>
 ```
-HTML:
+###### HTML:
 ```html
 <html>
 <head>
@@ -192,7 +195,7 @@ HTML:
 </body>
 </html>
 ```
-OUTPUT:
+###### OUTPUT:
 ```html
 <html>
 <head>
