@@ -146,7 +146,7 @@ There are a few special attributes that are handled differently:
 #####	number: forces a number value
 		eg. <qcomp count:number='5'>my-component</qcomp>
 
-	string<default>: 
+#####	string<default>: 
 
 #####	json: creates an object from a json string  
 		eg. <qcomp props:json='{"item": "hello items", "item2": "hello item2" }'>my-component</qcomp>
@@ -158,6 +158,7 @@ There are a few special attributes that are handled differently:
 		eg. <qcomp name:attr='myComp1'>my-component</qcomp>
 
 Componenet File comps.comp:
+```html
 <component name='my-component'>
 	<div class='my-component' style='color:#000'>
 		{title}
@@ -174,8 +175,9 @@ Componenet File comps.comp:
 		}
 	</script>
 </component>
-
+```
 HTML:
+```html
 <html>
 <head>
 	<title></title>
@@ -189,8 +191,9 @@ HTML:
 <qcomp title='Hello World' class='myworld' style='font-weight:bold' props:json='{"item": "hello items", "item2": "hello item2"}'>my-component</qcomp>
 </body>
 </html>
-
+```
 OUTPUT:
+```html
 <html>
 <head>
 	<title></title>
@@ -207,12 +210,13 @@ OUTPUT:
 </div>
 </body>
 </html>
+```
 
-
-Nesting Components:
+#Nesting Components:
 	Nested components inherit the propeties(_options) from their parents unless overridden by their own. 
 	This does not include the special properties (id, class, style).
 
+```html
 <component name='my-component'>
 	<div>
 		<qcomp>my-component-header</qcomp>
@@ -226,17 +230,18 @@ Nesting Components:
 <body>
 	<qcomp title="Hello World">my-component</qcomp>
 </body>
-
+```
 Output:
+```html
 <body>
 	<div>
 		<div>Hello World<div>
 		<div>Some other Title</div>
 	</div>
 </body>
+```
 
+#Compiling components programmatically:
+	`var myComp = new QComponent('my-component', {title:"Hello World"});`
 
-Compiling components programmatically:
-	var myComp = new QComponent('my-component', {title:"Hello World"});
-
-	$('body').append(myComp.view);
+	`$('body').append(myComp.view);`
