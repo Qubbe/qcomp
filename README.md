@@ -212,7 +212,7 @@ OUTPUT:
 </html>
 ```
 
-#Nesting Components:
+# Nesting Components:
 	Nested components inherit the propeties(_options) from their parents unless overridden by their own. 
 	This does not include the special properties (id, class, style).
 
@@ -241,7 +241,7 @@ Output:
 </body>
 ```
 
-#Compiling components programmatically:
+# Compiling components programmatically:
 ```javascript
 	var myComp = new QComponent('my-component', {title:"Hello World"});
 	$('body').append(myComp.view);
