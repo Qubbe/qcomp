@@ -120,7 +120,7 @@ $('body').append(item.view); //appends the components view to the body
 ```
 `QComponent.controller` => A reference to the script of the component
 ```javascript
-item.controller.myFunction(); //run myFunction which has been defined in the component script and exposed.
+item.controller.setTitle('Hello World'); //run setTitle function which has been defined in the component script and exposed.
 ```
 ```html
 <component name='my-item'>
