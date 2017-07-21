@@ -32,7 +32,7 @@ Structure of a component file as of version 1.5.10
 	*/
 
 	//Will add this script to the head
-	<script src='myscript.js'></script
+	<script src='myscript.js'></script>
 
 	
 
